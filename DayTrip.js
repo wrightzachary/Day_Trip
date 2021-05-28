@@ -1,19 +1,43 @@
 // random destination
 let destination = ['Austin', 'Dallas', 'San Antonio', 'Houston'];    
-let randomDestination = destination[Math.floor(Math.random() * 4)];
-console.log(randomDestination);
+function whereWillWeGo(choicesForLocation){
+    let randomDestination = destination[Math.floor(Math.random() * 4)];
+    for(let index = 0; index < destination.length; index--){
+        console.log(randomDestination);
+        return choicesForLocation;
+    }
+} 
+whereWillWeGo(destination);
 
 // random restaurant
 let restaurant = ['Pluckers', 'Papadeoux', 'Cheddars', 'Food Trucks'];
-let randomRestaurant = restaurant[Math.floor(Math.random() * 4)];
-console.log(randomRestaurant);
+function whereWillWeEat(choicesForFood){
+    let randomRestaurant = restaurant[Math.floor(Math.random() * 4)];
+    for(let index = 0; index < restaurant.length; index--){
+        console.log(randomRestaurant);
+        return choicesForFood;
+    }
+} 
+whereWillWeEat(restaurant);
 
 // random transportation
 let transportation = ['Car', 'Plane', 'Carpool With Friends', 'You choose'];
-let randomTransportation = transportation[Math.floor(Math.random() * 4)];
-console.log(randomTransportation);
+function howWillWeGetThere(choicesForTransportation){
+    let randomTransportation = transportation[Math.floor(Math.random() * 4)];
+    for(let index = 0; index < transportation.length; index++){
+        console.log(randomTransportation);
+        return choicesForTransportation;
+    }
+}
+howWillWeGetThere(transportation);
 
 // random entertainment
 let entertainment = ['Bowling', 'GoKarts', 'Six Flags', 'Top Golf'];
-let randomEntertainment = entertainment[Math.floor(Math.random() * 4)];
-console.log(randomEntertainment);
+function whatWillWeDo(choicesForEntertainment){
+    let randomEntertainment = entertainment[Math.floor(Math.random() * 4)];
+    for(let index = 0; index < entertainment.length; index++){
+        console.log(randomEntertainment);
+        return choicesForEntertainment;
+    }
+}
+whatWillWeDo(entertainment);
