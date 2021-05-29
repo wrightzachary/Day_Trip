@@ -21,7 +21,7 @@ function whereWillWeEat(choicesForFood){
 whereWillWeEat(restaurant);
 
 // random transportation
-let transportation = ['Car', 'Plane', 'Carpool With Friends', 'You choose'];
+let transportation = ['Car', 'Plane', 'Carpool with friends', 'Transportation of your choosing'];
 function howWillWeGetThere(choicesForTransportation){
     let randomTransportation = transportation[Math.floor(Math.random() * 4)];
     for(let index = 0; index < transportation.length; index++){
@@ -41,3 +41,41 @@ function whatWillWeDo(choicesForEntertainment){
     }
 }
 whatWillWeDo(entertainment);
+
+function whatIfWeDo(whatDoYouThink){
+let userResponse = prompt("How does that sound? Enter 'Yes' or 'Try Again'.");
+let selection = userResponse;
+    while(selection){
+    if(userResponse  == "Yes"){
+        console.log(userResponse, "let's get ready!");
+        return this;
+    }
+    else if(userResponse == "Try again"){
+        console.log(destination[Math.floor(Math.random() * 4)]);
+        console.log(restaurant[Math.floor(Math.random() * 4)]);
+        console.log(transportation[Math.floor(Math.random() * 4)]);
+        console.log(entertainment[Math.floor(Math.random() * 4)]);
+        return this;
+    }
+        else if(userResponse  != "Yes" && "Try again"){
+        console.log(userResponse, "let's retry the generator!");
+    }
+    }
+    return this;
+}
+
+whatIfWeDo();
+
+function confirmationOfTrip(){
+    userResponse = prompt("Confirm your trip?");
+    if (userResponse == "Yes"){
+        console.log("Trip completed!");
+    }
+    else if( userResponse == "No"){
+        console.log("Trip not completed!");
+    }
+    else{
+        console.log("Not a valid response!");
+    }
+}
+confirmationOfTrip();
